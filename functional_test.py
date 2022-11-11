@@ -29,7 +29,7 @@ class NewVisitorTest(unittest.TestCase):
             'Enter a to-do item'
         )
 
-        # Writes 'Buy peacock feathers' 
+        # Writes 'Buy peacock feathers'
         inputbox.send_keys('Buy peacock feathers')
 
         # Hits enter and a new line is created
