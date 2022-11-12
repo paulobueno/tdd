@@ -1,3 +1,4 @@
+import selenium.webdriver.firefox.options
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -8,7 +9,9 @@ from selenium.webdriver.common.by import By
 class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
-        self.browser = webdriver.Firefox()
+        options = selenium.webdriver.firefox.options.Options()
+        options.binary_location = '/usr/local/bin/firefox'
+        self.browser = webdriver.Firefox(options=options)
 
     def tearDown(self):
         self.browser.quit()
